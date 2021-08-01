@@ -1,0 +1,27 @@
+ANS. 1:-
+In this question , we have to take input an integer and check whether this integer is single digit , if it is more than 1 digit than we have to convert it into a single digit numer
+and count the number of convergation it take to reduce it to single digit number. In this question , the size of integer is very long so we can't take it to an intger variable.
+So, I took a string and then convert into integer. If the length of string is 1 then value of count is 0 , because no convergation is required. I take element of string one by one 
+and adding it by subtracting 48 in element , so that I get the required integer. then I applied a while loop. It ends when we get a single digit number. Then I printed the count.
+
+
+Ans.2 :-
+In this question, we have to take input number of flags. Then we have to find how many flags which have different colors. As we know that flags only have different colors when
+they are in prime numbers because prime numbers are not divisible from any number except itself. So I take an function findprime which take input a number and find that whether 
+this number is prime or not. I applied this function in a for loop so that it checks all the numbers from 2 to itself. If a prime number is found at any position then it would 
+increase the count by 1 and then count will be added to sum. Then I printed finally the sum of all counts.
+
+Ans. 3:-
+In this question , we have to take input length of wall and then number of bricks and then taking input strenght of each bricks. We have to add bricks in such way that the 
+maximum strength of bricks can be attained. If length of wall is 1 then simply we add all the bricks to attain maximum strength , but if the length of wall is 2 then we have to
+do certain calculations to attain maximum length. First we define an 2D array which is made of logical statements. Then doing certain calculations to change the array values. Then I
+applied the for loop which is going from sum/2 till j becomes 0. If at any position the value of true comes then we simply give it to an another variable, and then print the 
+answer.
+
+Ans.4 :-
+In this question, we have to take input first length of wall, then number of bricks and then strength of bricks . In this question we can only add adjacent bricks to attain 
+minimum strength. So firstly I take a while loop which runs till the number of bricks decrease to length of wall. So firstly I check in the while loop that whether n and m are same
+or different. If different then I applied a else condition in which I took a pointer then allocates memory to it a unit less than the size of m then I add two adjacent values and
+giving it to pointer then check which value is minimum and then I applied it to the array element which has minimum value by adding the adjacent succesive element and then giving 
+successive element the value 0. Then I swap that element to the last, so I can reduce the size of the array. Then I at every loop , decreasing the value of m by 1 every time. 
+When the value of m becomes n then I checked the maximum element in the array and then I printed it. 
