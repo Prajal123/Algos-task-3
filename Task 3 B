@@ -1,0 +1,26 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int findprime(int num){
+for(int i=2;i<=sqrt(num);i++){
+    if(num%i==0){
+        return 0;
+    }
+}
+return 1;
+}
+int main(){
+    int n,count=0,sum=0;
+    cin>>n;
+   for(int i=2;i<=n;i++){
+    if(findprime(i)==1){
+        count++;
+        sum+=count;
+    }
+   }
+    cout<<sum<<endl;
+return 0;
+}
