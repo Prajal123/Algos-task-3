@@ -1,0 +1,46 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+int n;
+cin>>n;
+int m,sum=0;
+cin>>m;
+int a[m];
+for(int i=0;i<m;i++){
+    cin>>a[i];
+    sum+=a[i];
+}
+if(n==1){
+    cout<<sum<<endl;
+    return 0;
+}
+bool arr[m+1][sum+1]={};
+for(int i=0;i<=n;i++)
+    arr[i][0]=true;
+for(int j=1;j<=sum;j++){
+    arr[0][j]=false;
+}
+for(int i=1;i<=m;i++){
+    for(int j=1;j<=sum;j++){
+     arr[i][j]=arr[i-1][j];
+
+     if(a[i-1]<=j)
+        arr[i][j]=arr[i][j] || arr[i-1][j-a[i-1]];
+    }
+
+}
+ int ans=LONG_MAX;
+ for(int j=sum/2;j>=0;j--){
+    if(arr[m][j]){
+        ans=j;
+        break;
+    }
+ }
+ cout<<ans<<endl;
+return 0;
+}
